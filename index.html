@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Quiz Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="start-screen">
+            <div class="start-content">
+                <h1>Tech Quiz Challenge</h1>
+                <p>Test your knowledge of web development technologies</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>25 Questions</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>03 Minute Timer</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-trophy"></i>
+                        <span>Instant Results</span>
+                    </div>
+                </div>
+                <button id="start-btn" class="btn">
+                    <i class="fas fa-play"></i> Start Quiz
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="quiz-screen hide">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="quiz-header">
+                <div class="question-count">
+                    <i class="fas fa-question-circle"></i>
+                    <span id="question-number">1</span>/<span id="total-questions">25</span>
+                </div>
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="time">180</span>s
+                </div>
+                <div class="score">
+                    <i class="fas fa-star"></i>
+                    <span id="current-score">0</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="question-container">
+                    <h2 id="question-text">Question goes here</h2>
+                    <div id="options-container" class="options-container">
+                        <!-- Options will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="prev-btn" class="btn btn-outline" disabled>
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="next-btn" class="btn">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button id="submit-btn" class="btn hide">
+                    <i class="fas fa-paper-plane"></i> Submit
+                </button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="result-screen hide">
+            <div class="result-content">
+                <div class="result-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h1>Quiz Completed!</h1>
+                <div class="result-score">
+                    <span id="final-score">0</span>/<span id="max-score">25</span>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-row">
+                        <span>Correct Answers:</span>
+                        <span id="correct-answers">0</span>
+                    </div>
+                    <div class="result-row">
+                        <span>Wrong Answers:</span>
+                        <span id="wrong-answers">0</span>
+                    </div>
+                    <div class="result-row">
+                        <span>Time Taken:</span>
+                        <span id="time-taken">0</span> seconds
+                    </div>
+                    <div class="result-row">
+                        <span>Accuracy:</span>
+                        <span id="accuracy">0</span>%
+                    </div>
+                </div>
+                
+                <button id="restart-btn" class="btn">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
